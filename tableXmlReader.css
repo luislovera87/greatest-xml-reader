@@ -1,0 +1,61 @@
+body{
+	/*background-color: #212529;*/
+	font-size: small;
+	padding: 0.5em;
+}
+
+table{
+	margin-top: 5px;
+	text-align: center;
+	font-size: 13px;
+}
+
+thead{
+	height: 10px;
+}
+
+hr{
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+td{
+	text-align: center;
+}
+
+.navbar{
+	padding: 0.2em;
+}
+
+.custom-file-control::after{
+	content: "Select files...";
+	font-size: 14px;
+}
+
+.custom-file-control::before{
+	content: "Browse...";
+}
+
+.exportGroup{
+	display: inline-block;    
+    margin-top: 5px;
+    margin-left: 5%;
+}
+
+.navbar-text{
+	padding: 0;
+	font-size: 29px;
+	margin-right: 20px;
+}
+
+.navbar-brand{
+	margin-left: 20px;
+}
+
+.vendor{
+	max-width: 300px;
+}
+
+.descripcion{
+	max-width: 230px;
+}
