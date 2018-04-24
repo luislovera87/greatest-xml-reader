@@ -2,3 +2,63 @@
 session_start();
 include_once 'header.php';
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Greatest Reader</title>	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<link rel="stylesheet" type="text/css" href="tableXmlReader.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+	<nav class="navbar">		 		  		  		 
+		  <span class="navbar-text">
+      		XML Reader
+    	</span>
+	</nav>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 form-group">
+				<form id="xmlForm" method="get" action="/GreatestXmlReader.html" enctype="multipart/form-data">					
+					<div class="btn-group exportGroup" role="group">  
+						<input id ="fileChooser" class="form-control" type="file" accept="text/xml" multiple>
+						<a id="dlink"  style="display:none;"></a>									
+						<input id="exportBtn" type="button" class="exportBtn btn btn-outline-success btn-sm" onclick="tableToExcel('table', 'name', 'InvoiceTable.xls')" value="Export to Excel">
+						<input id="clearBtn" class="btn btn-primary btn-sm" type="submit" value="Clear Table"/>
+					</div>					
+				</form>
+			</div>
+			<div class="col-md-12">
+				<table id="table" class="table table-sm table-hover">
+					<thead class="thead-dark">
+						<tr>
+							<th scope="col">Vendor</th>
+							<th scope="col">Concepto</th>
+							<th scope="col">Fecha</th>
+							<th scope="col">Importe</th>
+							<th scope="col">Moneda</th>
+							<th scope="col">Cantidad</th>
+							<th scope="col">Folio</th>
+							<th scope="col">Forma de Pago</th>
+							<th scope="col">Metodo de Pago</th>
+							<th scope="col">Uso de CFDI</th>
+							<th scope="col">Receptor</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>	  	
+
+	<!-- Bootstrap -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+	<!-- Custom -->
+	<script type="text/javascript" src="invoiceReader.js"></script>
+</html>
